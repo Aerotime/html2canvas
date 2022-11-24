@@ -5,7 +5,8 @@ import {Context} from '../../core/context';
 export const enum BACKGROUND_ORIGIN {
     BORDER_BOX = 0,
     PADDING_BOX = 1,
-    CONTENT_BOX = 2
+    CONTENT_BOX = 2,
+    TEXT = 3
 }
 
 export type BackgroundOrigin = BACKGROUND_ORIGIN[];
@@ -23,6 +24,8 @@ export const backgroundOrigin: IPropertyListDescriptor<BackgroundOrigin> = {
                         return BACKGROUND_ORIGIN.PADDING_BOX;
                     case 'content-box':
                         return BACKGROUND_ORIGIN.CONTENT_BOX;
+                    case 'text':
+                        return BACKGROUND_ORIGIN.TEXT;
                 }
             }
             return BACKGROUND_ORIGIN.BORDER_BOX;
